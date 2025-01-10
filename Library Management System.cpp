@@ -44,4 +44,15 @@ public:
         books.emplace_back(id, title, author);
         cout << "Book added successfully!\n";
     }
+
+    // Search for a Book
+    void searchBook(int id) {
+        for (const auto& book : books) {
+            if (book.getBookID() == id) {
+                book.displayBook();
+                return;
+            }
+        }
+        cout << "Book not found!\n";
+    }
 }
