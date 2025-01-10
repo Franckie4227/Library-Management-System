@@ -99,3 +99,21 @@ public:
         cout << "Book not found!\n";
     }
 };
+
+int main() {
+    Library library;
+    int choice, id;
+    string title, author;
+
+    do {
+        cout << "\nLibrary Management System\n";
+        cout << "1. Add Book\n";
+        cout << "2. Search Book\n";
+        cout << "3. Display All Books\n";
+        cout << "4. Issue Book\n";
+        cout << "5. Return Book\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+}
