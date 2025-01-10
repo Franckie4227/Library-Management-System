@@ -82,4 +82,20 @@ public:
         }
         cout << "Book not found!\n";
     }
+
+    // Return a Book
+    void returnBook(int id) {
+        for (auto& book : books) {
+            if (book.getBookID() == id) {
+                if (book.getIsIssued()) {
+                    book.returnBook();
+                    cout << "Book returned successfully!\n";
+                } else {
+                    cout << "Book was not issued!\n";
+                }
+                return;
+            }
+        }
+        cout << "Book not found!\n";
+    }
 }
