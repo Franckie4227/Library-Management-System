@@ -94,3 +94,20 @@ public:
              << ", Grade Level: " << gradeLevel << endl;
     }
 };
+
+// Derived Class: Professor
+class Professor : public Member {
+private:
+    string department;
+
+public:
+    Professor(int id, string n, string dept)
+        : Member(id, n), department(dept) {}
+
+    void displayMemberDetails() const override {
+        cout << "Professor - ID: " << memberID
+             << ", Name: " << name
+             << ", Department: " << department << endl;
+    }
+};
+
