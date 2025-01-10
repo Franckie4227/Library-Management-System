@@ -151,4 +151,25 @@ public:
             member->displayMemberDetails();
         }
     }
+};
+
+// Main Function
+int main() {
+    Library library;
+
+    // Adding books
+    library.addBook(new Fiction(1, "To Kill a Mockingbird", "Harper Lee", "Drama"));
+    library.addBook(new Reference(2, "C++ Programming Language", "Bjarne Stroustrup", "Programming"));
+
+    // Adding members
+    library.addMember(new Student(101, "Alice", "10th Grade"));
+    library.addMember(new Professor(201, "Dr. John", "Computer Science"));
+
+    cout << "\nDisplaying all books:\n";
+    library.displayAllBooks();
+
+    cout << "\nDisplaying all members:\n";
+    library.displayAllMembers();
+
+    return 0;
 }
