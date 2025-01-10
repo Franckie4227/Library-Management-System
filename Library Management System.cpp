@@ -25,6 +25,8 @@ public:
     // Issue and Return Methods
     void issueBook() { isIssued = true; }
     void returnBook() { isIssued = false; }
+    bool getIsIssued() const { return isIssued; }
+    int getBookID() const { return bookID; }
 
     // Display Book Details
     void displayBook() const {
