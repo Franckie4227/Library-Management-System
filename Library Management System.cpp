@@ -46,3 +46,21 @@ public:
              << ", Status: " << (isIssued ? "Issued" : "Available") << endl;
     }
 };
+
+// Derived Class: Reference
+class Reference : public Book {
+private:
+    string subject;
+
+public:
+    Reference(int id, string t, string a, string s)
+        : Book(id, t, a), subject(s) {}
+
+    void displayBookDetails() const override {
+        cout << "Reference Book - ID: " << bookID
+             << ", Title: " << title
+             << ", Author: " << author
+             << ", Subject: " << subject
+             << ", Status: " << (isIssued ? "Issued" : "Available") << endl;
+    }
+};
