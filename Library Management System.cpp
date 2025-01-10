@@ -55,4 +55,15 @@ public:
         }
         cout << "Book not found!\n";
     }
+
+    // Display All Books
+    void displayAllBooks() {
+        if (books.empty()) {
+            cout << "No books in the library.\n";
+            return;
+        }
+        for (const auto& book : books) {
+            book.displayBook();
+        }
+    }
 }
