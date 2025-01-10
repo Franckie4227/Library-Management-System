@@ -111,3 +111,9 @@ public:
     }
 };
 
+// Library Class
+class Library{
+private:
+    vector<Book*> books;  // Store base class pointers
+    vector<Member*> members;
+}
