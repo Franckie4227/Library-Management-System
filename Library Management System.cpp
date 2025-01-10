@@ -79,3 +79,18 @@ public:
     }
 };
 
+// Derived Class: Student
+class Student : public Member {
+private:
+    string gradeLevel;
+
+public:
+    Student(int id, string n, string grade)
+        : Member(id, n), gradeLevel(grade) {}
+
+    void displayMemberDetails() const override {
+        cout << "Student - ID: " << memberID
+             << ", Name: " << name
+             << ", Grade Level: " << gradeLevel << endl;
+    }
+};
