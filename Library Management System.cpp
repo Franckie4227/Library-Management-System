@@ -140,4 +140,15 @@ public:
             book->displayBookDetails();
         }
     }
+
+    // Display All Members
+    void displayAllMembers() {
+        if (members.empty()) {
+            cout << "No members in the library.\n";
+            return;
+        }
+        for (const auto& member : members) {
+            member->displayMemberDetails();
+        }
+    }
 }
