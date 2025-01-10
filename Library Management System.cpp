@@ -66,4 +66,20 @@ public:
             book.displayBook();
         }
     }
+
+    // Issue a Book
+    void issueBook(int id) {
+        for (auto& book : books) {
+            if (book.getBookID() == id) {
+                if (!book.getIsIssued()) {
+                    book.issueBook();
+                    cout << "Book issued successfully!\n";
+                } else {
+                    cout << "Book is already issued!\n";
+                }
+                return;
+            }
+        }
+        cout << "Book not found!\n";
+    }
 }
