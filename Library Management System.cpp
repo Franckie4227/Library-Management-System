@@ -114,6 +114,13 @@ public:
 // Library Class
 class Library{
 private:
-    vector<Book*> books;  // Store base class pointers
-    vector<Member*> members;
+  vector<Book*> books;  // Store base class pointers
+  vector<Member*> members;
+
+public:
+    // Add a Book
+    void addBook(Book* book) {
+        books.push_back(book);
+        cout << "Book added successfully!\n";
+    }
 }
