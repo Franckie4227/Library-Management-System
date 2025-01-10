@@ -116,4 +116,48 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
+        switch (choice) {
+            case 1:
+                cout << "Enter Book ID: ";
+            cin >> id;
+            cin.ignore();
+            cout << "Enter Title: ";
+            getline(cin, title);
+            cout << "Enter Author: ";
+            getline(cin, author);
+            library.addBook(id, title, author);
+            break;
+
+            case 2:
+                cout << "Enter Book ID to Search: ";
+            cin >> id;
+            library.searchBook(id);
+            break;
+
+            case 3:
+                library.displayAllBooks();
+            break;
+
+            case 4:
+                cout << "Enter Book ID to Issue: ";
+            cin >> id;
+            library.issueBook(id);
+            break;
+
+            case 5:
+                cout << "Enter Book ID to Return: ";
+            cin >> id;
+            library.returnBook(id);
+            break;
+
+            case 6:
+                cout << "Exiting the system. Goodbye!\n";
+            break;
+
+            default:
+                cout << "Invalid choice! Please try again.\n";
+        }
+    } while (choice != 6);
+
+    return 0;
 }
