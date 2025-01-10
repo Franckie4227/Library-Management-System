@@ -5,7 +5,7 @@ using namespace std;
 
 // Book Class
 class Book {
-private:
+protected:
     int bookID;
     string title;
     string author;
