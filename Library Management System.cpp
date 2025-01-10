@@ -64,3 +64,18 @@ public:
              << ", Status: " << (isIssued ? "Issued" : "Available") << endl;
     }
 };
+
+// Base Class: Member
+class Member {
+protected:
+    int memberID;
+    string name;
+
+public:
+    Member(int id, string n) : memberID(id), name(n) {}
+    virtual void displayMemberDetails() const {
+        cout << "Member ID: " << memberID
+             << ", Name: " << name << endl;
+    }
+};
+
