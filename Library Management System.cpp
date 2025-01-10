@@ -123,4 +123,21 @@ public:
         books.push_back(book);
         cout << "Book added successfully!\n";
     }
+
+    // Add a Member
+    void addMember(Member* member) {
+        members.push_back(member);
+        cout << "Member added successfully!\n";
+    }
+
+    // Display All Books
+    void displayAllBooks() {
+        if (books.empty()) {
+            cout << "No books in the library.\n";
+            return;
+        }
+        for (const auto& book : books) {
+            book->displayBookDetails();
+        }
+    }
 }
