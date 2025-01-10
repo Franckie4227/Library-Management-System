@@ -32,3 +32,16 @@ public:
              << (isIssued ? "Issued" : "Available") << endl;
     }
 };
+
+// Library class
+class Library{
+private:
+    vector<Book> books;
+
+public:
+    // Add a Book
+    void addBook(int id, string title, string author) {
+        books.emplace_back(id, title, author);
+        cout << "Book added successfully!\n";
+    }
+}
